@@ -12,8 +12,23 @@ public class CharacterLineRenderDown : MonoBehaviour
 
 
     void Update()
-    {
+    {       
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out _hitCollider, detectLevelHeiht, _layerMask))
+        {
+            Debug.Log("Is not safe to descend");           
+            Debug.DrawLine(transform.position, transform.position + (transform.rotation * Vector3.down) * detectLevelHeiht, Color.red);
+        }
+        else 
+        {
+            Debug.Log("keep descending");       
+            ShipModel.transform.localPosition+=  new Vector3(0, -1, 0) * (descendSpeed * Time.deltaTime);
+        }
+    }
+}
 
+
+//codigo original
+/*
         if (Physics.Raycast(transform.position, Vector3.down, out _hitCollider, detectLevelHeiht, _layerMask))
         {
             Debug.Log("Is not safe to descend");
@@ -22,8 +37,4 @@ public class CharacterLineRenderDown : MonoBehaviour
         else 
         {
             Debug.Log("keep descending");       
-            ShipModel.transform.localPosition+=  new Vector3(0, -1, 0) * (descendSpeed * Time.deltaTime);
-    }
-
-    }
-}
+            ShipModel.transform.localPosition+=  new Vector3(0, -1, 0) * (descendSpeed * Time.deltaTime);*/

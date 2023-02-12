@@ -13,12 +13,12 @@ public class CharacterLineRender : MonoBehaviour
 
     void Update()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out _hitCollider, detectLevelHeiht, _layerMask))
+       
+     if (Physics.Raycast(transform.position, transform.forward, out _hitCollider, detectLevelHeiht, _layerMask))
         {
             Debug.DrawLine(transform.position, _hitCollider.point, Color.blue);
             Debug.Log("go up NOW!!");
             ShipModel.transform.position += transform.position.y * new Vector3(0, -1, 0) * (ascencionSpeed * Time.deltaTime);
         }
     }
-
 }
