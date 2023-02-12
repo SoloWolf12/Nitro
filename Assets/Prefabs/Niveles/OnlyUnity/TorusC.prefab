@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83693949713244089}
   - component: {fileID: 3528684830261482544}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 8965057631113222532}
   - component: {fileID: 8965057631113222533}
   - component: {fileID: 6882508985394797726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TorusC
   m_TagString: Level
   m_Icon: {fileID: 0}
