@@ -13,6 +13,7 @@ public class CharacterLineRender : MonoBehaviour
 
     void Update()
     {
+        
        
      if (Physics.Raycast(transform.position, transform.forward, out _hitCollider, detectLevelHeiht, _layerMask))
         {

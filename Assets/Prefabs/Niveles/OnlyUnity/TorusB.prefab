@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 132843393022789084}
   - component: {fileID: 3509991135318383221}
   - component: {fileID: 9198447277572081245}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8940637324011289176}
   - component: {fileID: 3438647996406737356}
   - component: {fileID: 3255882154394112022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 4045236535858014279}
   - component: {fileID: 5212166644766725431}
   - component: {fileID: 2304551538352953154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 8420320068109199534}
   - component: {fileID: 4997359547025558661}
   - component: {fileID: 4920108955980187065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83693949713244089}
   - component: {fileID: 3528684830261482544}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7272983397325595271}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 20, z: 20}
