@@ -40,7 +40,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7272983397325595271}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 20, z: 20}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 8965057631113222532}
   - component: {fileID: 8965057631113222533}
   - component: {fileID: 6882508985394797726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TorusC
   m_TagString: Level
   m_Icon: {fileID: 0}

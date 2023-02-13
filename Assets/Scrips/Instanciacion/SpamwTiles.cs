@@ -21,12 +21,17 @@ public class SpamwTiles : MonoBehaviour
         _previousPrefabPosition = startPoint.transform.position; 
         _startTime = Time.time;
     }
+
+
+    
     void Update()
     {
-        ChooseLevel();
-        DestroyLevel();
+        //ChooseLevel();
+        //DestroyLevel();
+
+        
     }
-    private void ChooseLevel() 
+    public void ChooseLevel() 
     {
         selectPrefab=Random.Range(1, 4);       
         GenerateLevel(selectPrefab);            
@@ -35,38 +40,53 @@ public class SpamwTiles : MonoBehaviour
     {
         if (levelSelect == 1)
         {
-            if (Time.time - _startTime > timeForNewGenPrefab)
-            {
-                Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
-                _startTime = Time.time;
-                Instantiate(prefabToSpawn1, spawnPos, Quaternion.Euler(prefabAngle));
-                _previousPrefabPosition = spawnPos;
-            }
+            Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
+            Instantiate(prefabToSpawn1, spawnPos, Quaternion.Euler(prefabAngle));
+            _previousPrefabPosition = spawnPos;
+
+            /* if (Time.time - _startTime > timeForNewGenPrefab)
+             {
+                 Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
+                 _startTime = Time.time;
+                 Instantiate(prefabToSpawn1, spawnPos, Quaternion.Euler(prefabAngle));
+                 _previousPrefabPosition = spawnPos;
+             }*/
         }
         else if (levelSelect == 2)
         {
-            if (Time.time - _startTime > timeForNewGenPrefab)
+
+            Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
+            Instantiate(prefabToSpawn2, spawnPos, Quaternion.Euler(prefabAngle));
+
+            _previousPrefabPosition = spawnPos;
+            /*if (Time.time - _startTime > timeForNewGenPrefab)
             {
                 Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
                 _startTime = Time.time;
                 Instantiate(prefabToSpawn2, spawnPos, Quaternion.Euler(prefabAngle));
 
                 _previousPrefabPosition = spawnPos;
-            }
+            }*/
         }
         else 
         {
-            if (Time.time - _startTime > timeForNewGenPrefab)
-            {
-                Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
-                _startTime = Time.time;
-                Instantiate(prefabToSpawn3, spawnPos, Quaternion.Euler(prefabAngle));
+            Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
+           
+            Instantiate(prefabToSpawn3, spawnPos, Quaternion.Euler(prefabAngle));
 
-                _previousPrefabPosition = spawnPos;
-            }
+            _previousPrefabPosition = spawnPos;
+
+            /* if (Time.time - _startTime > timeForNewGenPrefab)
+             {
+                 Vector3 spawnPos = _previousPrefabPosition + distanceBetweenPrefabs * _direction;
+                 _startTime = Time.time;
+                 Instantiate(prefabToSpawn3, spawnPos, Quaternion.Euler(prefabAngle));
+
+                 _previousPrefabPosition = spawnPos;
+             }*/
         }
     }
-    private void DestroyLevel()
+    public void DestroyLevel()
     {
         GameObject[] allPrefabs = GameObject.FindGameObjectsWithTag("Level");
         if (allPrefabs.Length > 3)
