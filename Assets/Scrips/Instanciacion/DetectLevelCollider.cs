@@ -22,7 +22,7 @@ public class DetectLevelCollider : MonoBehaviour
         }
     }
     private void OnTriggerEnter(Collider other)
-    {
+    {   
         Debug.Log("funciona");
         callToLevelGenerator.ChooseLevel();
         callToLevelGenerator.DestroyLevel();
