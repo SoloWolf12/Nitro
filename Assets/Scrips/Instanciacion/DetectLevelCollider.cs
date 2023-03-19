@@ -15,6 +15,7 @@ public class DetectLevelCollider : MonoBehaviour
 
     public void Update()
     {
+
         if (Input.GetKeyDown(keyCodeChangeLevel))
         {
 
